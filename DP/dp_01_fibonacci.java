@@ -16,7 +16,7 @@ public class dp_01_fibonacci {
 
     // Recursion
 
-    // TC - O(n^2)
+    // TC - O(2^n)
     // SC - O(n)
 
     public static int rec(int n){
@@ -57,7 +57,7 @@ public class dp_01_fibonacci {
     // Optimization
 
     // TC - O(n)
-    // SC - No space used
+    // SC - O(1)
 
     public static long optimization(int n){
         long prev2 = 0;

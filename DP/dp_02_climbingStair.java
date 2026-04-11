@@ -15,7 +15,7 @@ public class dp_02_climbingStair {
 
     // Recursion
 
-    // TC - O(n^2)
+    // TC - O(2^n)
     // SC - O(n)
 
     public static int rec(int n){
@@ -70,7 +70,7 @@ public class dp_02_climbingStair {
     // Optimization
 
     // TC - O(n)
-    // SC - No space used
+    // SC - O(1)
 
     public static int optimization(int n){
         int prev2 = 1;

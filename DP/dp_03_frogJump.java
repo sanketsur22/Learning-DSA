@@ -20,6 +20,9 @@ public class dp_03_frogJump {
     }
 
     // Recursion
+
+    // TC - O(2^n)
+    // SC - O(n)
     
     public static int rec(int ind, int[] height){
         if(ind == 0) return 0;
@@ -34,6 +37,9 @@ public class dp_03_frogJump {
     }
     
     // Memoization
+
+    // TC - O(n)
+    // SC - O(n) + O(n)
     
     public static int solveDp(int ind, int[] height, int[] dp){
         if(ind == 0) return 0;
@@ -50,6 +56,9 @@ public class dp_03_frogJump {
     }
     
     // Tabulization
+
+    // TC - O(n)
+    // SC - O(n)
     
     public static int solveDp2(int n, int[] height, int[] dp){
         dp[0] = 0;
@@ -67,6 +76,9 @@ public class dp_03_frogJump {
     }
     
     // Optimization
+
+    // TC - O(n)
+    // SC - O(1)
     
     public static int solveDp3(int n, int[] height){
         int prev1 = 0;
