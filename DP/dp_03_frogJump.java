@@ -1,5 +1,5 @@
 import java.util.*;
-public class dp_02_frogJump {
+public class dp_03_frogJump {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
