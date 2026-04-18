@@ -113,4 +113,31 @@ class dp_07_ninjasTraining {
 
         return dp[n-1][3];
     }
+
+    // Optimization
+
+    // TC - O(n * 4) * 3
+    // SC - O(4)
+
+    public static int tabulization(int n, int[][] arr, int[] dp){
+        dp[0] = Math.max(arr[0][1], arr[0][2]);
+        dp[0] = Math.max(arr[0][0], arr[0][2]);
+        dp[0] = Math.max(arr[0][0], arr[0][1]);
+        dp[0] = Math.max(Math.max(arr[0][0], arr[0][1]), arr[0][2]);
+
+        for(int day = 1; day < n; day++){
+            int[] temp = new int[4];
+            for(int last = 0; last < 4; last++){
+                temp[last] = 0;
+                for(int task = 0; task<3; task++){
+                    if(task != last){
+                        temp[last] = Math.max(temp[last], arr[day][task] + dp[task]);
+                    }
+                }
+            }
+            dp = temp;
+        }
+
+        return dp[3];
+    }
 }
